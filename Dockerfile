@@ -10,3 +10,4 @@ RUN mkdir /converterbot
 WORKDIR /converterbot
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"]
+python3 bot.py
