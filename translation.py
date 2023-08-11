@@ -37,10 +37,10 @@ Example:** `/api de303d5270f481aec928f39883da7b7f9a8812ac `
 **➕ Hit** 👉 /channel Command To Get Help About Adding your channel to bot.
 **➕ Hit** 👉 /footer To Get Help About Adding your Custom Footer to bot.
 
-If You Want Any **Other Shortner** Link Converter Bot Instead Of ""Shortnerfly** than **contact** at 👉 @Cyniteofficial (all **shortners support** available.)**
+If You Want Any **Other Shortner** Link Converter Bot Instead Of ""Shortnerfly** than **contact** at 👉 @Ramanandkrgupt (all **shortners support** available.)**
 '''
 
-ABOUT_TEXT = '''**Hey! My name is @snapurl_bot. I am SnapUrl.me Link Converter Bot.**
+ABOUT_TEXT = '''**Hey! My name is @SnapUrl_Converter_Bot. I am SnapUrl.me Link Converter Bot.**
 
 **⚡Features⚡**
 
@@ -149,7 +149,7 @@ This Text will be added to the **bottom** of every message **caption** or text
 For adding **line break** use \n
 To Remove Footer Text: `/footer remove`"""
 
-USERNAME_TEXT = """**Hello Harman, I am snapurl.me, Bulk Link Converter Bot From Linked snapurl.me Account,**
+USERNAME_TEXT = """**Hello {} , I am snapurl.me, Bulk Link Converter Bot From Linked snapurl.me Account,**
 
 **🌟 Type** /channel (channel link or username)
 
