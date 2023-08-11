@@ -12,7 +12,7 @@ API_HASH = os.environ.get("API_HASH", "f1be9e535abfe6f3e75d0acaa6925bc1")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "5843088812:AAF10GRUY6rcQpPDeVcMqOqs2y7FL5v3Q-E")
 ADMINS = [int(i.strip()) for i in os.environ.get("ADMINS").split("1905927769")] if os.environ.get("ADMINS") else []
 ADMIN = ADMINS
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "Snapurl0")
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "snapurl")
 DATABASE_URL = os.getenv("DATABASE_URL", "mongodb+srv://snapurl:snapurl@snap.cpt24qs.mongodb.net/?retryWrites=true&w=majority") 
 OWNER_ID =  int(os.environ.get("OWNER_ID", "1905927769")) 
 ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
