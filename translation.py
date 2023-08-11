@@ -127,7 +127,7 @@ USER_ABOUT_MESSAGE = """
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
-`/set_api [api]`
+`/api [api]`
             
 Ex: `/api de303d5270f481aec928f39883da7b7f9a8812ac `
 
