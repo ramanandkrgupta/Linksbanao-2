@@ -104,8 +104,8 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
 
 BACK_REPLY_MARKUP = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Back', callback_data="about_command")
-        InlineKeyboardButton("Close", callback_data="delete"),
+        InlineKeyboardButton('Back', callback_data="about_command"),
+        InlineKeyboardButton("Close", callback_data="delete")
     ],
 
 ])
