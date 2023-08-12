@@ -6,6 +6,7 @@ from config import *
 import asyncio
 from database.users import *
 from pyrogram import *
+from plugins.filters import private_use
 from pyrogram.types import *
 from bot import *
 from pyrogram.errors.exceptions.bad_request_400 import *
