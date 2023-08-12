@@ -228,7 +228,7 @@ async def unban_user_handler(c: Client, m: Message):
         logging.exception(e, exc_info=True)
 
 @Client.on_message(filters.command("stats") & filters.private)
-
+@private_use
 async def stats_handler(c: Client, m: Message):
     try:
         txt = await m.reply("`Fetching stats...`")
