@@ -9,7 +9,6 @@ from config import *
 from database import *
 from database.users import *
 from helpers import *
-from plugins.filters import private_use
 from pyrogram import *
 from pyrogram.types import *
 from translation import *
