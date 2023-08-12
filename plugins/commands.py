@@ -226,3 +226,36 @@ async def unban_user_handler(c: Client, m: Message):
                 await m.reply("User doesn't exist")
     except Exception as e:
         logging.exception(e, exc_info=True)
+
+@Client.on_message(filters.command("stats") & filters.private)
+@private_use
+async def stats_handler(c: Client, m: Message):
+    try:
+        txt = await m.reply("`Fetching stats...`")
+        size = await db.get_db_size()
+        free = 536870912 - size
+        size = await get_size(size)
+        free = await get_size(free)
+        link_stats = await db.get_bot_stats()
+        runtime = datetime.datetime.now()
+
+        t = runtime - temp.START_TIME
+        runtime = str(datetime.timedelta(seconds=t.seconds))
+        total_users = await total_users_count()
+
+        msg = f"""
+**- Total Users:** `{total_users}`
+**- Total Posts Sent:** `{link_stats['posts']}`
+**- Total Links Shortened:** `{link_stats['links']}`
+**- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
+**- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
+**- Used Storage:** `{size}`
+**- Total Free Storage:** `{free}`
+
+**- Runtime:** `{runtime}`
+    """
+
+
+        return await txt.edit(msg)
+    except Exception as e:
+        logging.error(e, exc_info=True)
