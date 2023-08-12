@@ -23,3 +23,6 @@ UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "STATUSLOVER30") # For Force S
 BROADCAST_AS_COPY = os.environ.get('BROADCAST_AS_COPY', "True") # true if forward should be avoided
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", 'https://snapurl.me/img/member-area-logo.png') # image when someone hit /start # image when someone hit /start
 LINK_BYPASS = "True"
+IS_PRIVATE = is_enabled(
+    os.environ.get("IS_PRIVATE", "False"), "False"
+)  # true for private use and restricting users
