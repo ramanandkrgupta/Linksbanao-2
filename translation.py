@@ -77,8 +77,8 @@ List of Admins who has access to this Bot
 ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
     [
-        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf')
-        
+        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf'),
+        InlineKeyboardButton("Admins", callback_data="admins_list")
     ],
 
 
