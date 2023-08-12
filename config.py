@@ -22,4 +22,4 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001916048501"))
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "STATUSLOVER30") # For Force Subscription
 BROADCAST_AS_COPY = os.environ.get('BROADCAST_AS_COPY', "True") # true if forward should be avoided
 WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", 'https://snapurl.me/img/member-area-logo.png') # image when someone hit /start # image when someone hit /start
-LINK_BYPASS = "true"
+LINK_BYPASS = "True"
