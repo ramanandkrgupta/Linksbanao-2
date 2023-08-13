@@ -98,7 +98,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
     elif query.data == 'help_command':
         await query.message.edit(HELP_MESSAGE.format(firstname=temp.FIRST_NAME, username=temp.BOT_USERNAME), reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
-    elif query.data == 'psnel_command':
+    elif query.data == 'panel_command':
         bot = await bot.get_me()
         await query.message.edit(PANEL_MESSAGE.format(bot.mention(style='md')), reply_markup=PANEL_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
