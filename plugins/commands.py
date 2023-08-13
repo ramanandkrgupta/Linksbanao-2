@@ -273,7 +273,7 @@ async def get_user_info_handler(c: Client, m: Message):
         res = USER_ABOUT_MESSAGE.format(
             base_site=user["base_site"],
             method=user["method"],
-            shortener_api="This is something secret",
+            shortener_api="[shortener_api]",
             mdisk_api="This is something secret",
             username=user["username"],
             header_text=user["header_text"].replace("\n", "\n")
