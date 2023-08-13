@@ -111,7 +111,9 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
     elif query.data == 'alias_conf':
         await query.message.edit(CUSTOM_ALIAS_MESSAGE, reply_markup=BACK_REPLY_MARKUP, disable_web_page_preview=True)
     elif query.data == 'panel_command':
-        bot = await bot.get_me()
+        if user_id not in ADMINS:
+            return await query.message.edit("Works only for admins", reply_markup=BACK_REPLY_MARKUP)
+
         await query.message.edit(PANEL_MESSAGE.format(bot.mention(style='md')), reply_markup=PANEL_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
     elif query.data == 'admins_list':
