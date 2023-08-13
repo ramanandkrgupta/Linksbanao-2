@@ -101,8 +101,7 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
         bot = await bot.get_me()
         await query.message.edit(ABOUT_TEXT.format(bot.mention(style='md')), reply_markup=ABOUT_REPLY_MARKUP, disable_web_page_preview=True)
         
-    
-elif query.data == 'start_command':
+    elif query.data == 'start_command':
         new_user = await get_user(query.from_user.id)
         tit = START_MESSAGE.format(query.from_user.mention, new_user["method"])
 
