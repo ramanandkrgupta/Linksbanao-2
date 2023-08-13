@@ -235,10 +235,7 @@ async def stats_handler(c: Client, m: Message):
         
         
         
-        runtime = datetime.datetime.now()
-
-        t = runtime - temp.START_TIME
-        runtime = str(datetime.timedelta(seconds=t.seconds))
+        
         total_users = await total_users_count()
 
         msg = f"""
@@ -246,7 +243,7 @@ async def stats_handler(c: Client, m: Message):
 
 
 
-**- Runtime:** `{runtime}`
+
     """
 
 
