@@ -19,9 +19,35 @@ from bot import *
 
 logger = logging.getLogger(__name__)
 
+#copy start
 
+@Client.on_callback_query(filters.regex("sub_refresh"))
+async def refresh_cb(c, m):
+    owner = c.owner
+    if UPDATE_CHANNEL:
+        try:
+            user = await c.get_chat_member(UPDATE_CHANNEL, m.from_user.id)
+            if user.status == "kicked":
+                with contextlib.suppress(Exception):
+                    await m.message.edit("**Hey you are banned**")
+                return
+        except UserNotParticipant:
+            await m.answer(
+                "You have not yet joined our channel. First join and then press refresh button",
+                show_alert=True,
+            )
 
+            return
+        except Exception as e:
+            print(e)
+            await m.message.edit(
+                f"Something Wrong. Please try again later or contact {owner.mention(style='md')}"
+            )
 
+            return
+    await m.message.delete()
+
+#copy end
 
 @Client.on_callback_query(filters.regex(r"^ban"))
 async def ban_cb_handler(c:Client,m: CallbackQuery):
