@@ -234,7 +234,7 @@ async def stats_handler(c: Client, m: Message):
         
         
         
-        link_stats = await db.get_bot_stats()
+        
         runtime = datetime.datetime.now()
 
         t = runtime - temp.START_TIME
@@ -243,10 +243,7 @@ async def stats_handler(c: Client, m: Message):
 
         msg = f"""
 **- Total Users:** `{total_users}`
-**- Total Posts Sent:** `{link_stats['posts']}`
-**- Total Links Shortened:** `{link_stats['links']}`
-**- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
-**- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
+
 
 
 **- Runtime:** `{runtime}`
