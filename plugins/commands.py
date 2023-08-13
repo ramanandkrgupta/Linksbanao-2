@@ -271,7 +271,6 @@ async def get_user_info_handler(c: Client, m: Message):
         if not user:
             return await m.reply_text("User doesn't exist")
         res = USER_ABOUT_MESSAGE.format(
-            usern=user["first_name"],
             base_site=user["base_site"],
             method=user["method"],
             shortener_api=user["shortener_api"],
@@ -286,7 +285,9 @@ async def get_user_info_handler(c: Client, m: Message):
             banner_image=user["banner_image"],
         )
 
-        res = f'User: `{user["user_id"]}`\n{res}'
+        res = f'User: `{user["user_id"]}`\n
+        `{user["first_name"]}`\n
+        {res}'
         reply_markup = InlineKeyboardMarkup(
             [
                 [
