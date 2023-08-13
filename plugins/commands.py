@@ -56,7 +56,6 @@ async def help_command(c, m: Message):
 async def panel_command(c, m: Message):
     reply_markup=PANEL_MESSAGE_REPLY_MARKUP
 
-    bot = await c.get_me()
     
 @Client.on_message(filters.command('features'))
 async def about_command(c, m: Message):
