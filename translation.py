@@ -1,6 +1,7 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-
+PANEL_MESSAGE = '''**HELLO, ADMIN **
+WELCOME TO ADMIN OF  @SnapUrl_Converter_Bot '''
 
 START_MESSAGE = '''**Hello, {}
 I Am SnapUrl.me, Bulk Link Converter. I Can Convert Links Directly From Your SnapUrl.me Account,
