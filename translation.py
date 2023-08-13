@@ -115,7 +115,7 @@ USER_ABOUT_MESSAGE = """
 
 - 🌐 Shortener website: {base_site}
 
-- 🧰 Method: {method}
+- 🧰 Method: Telegram Bot
 
 - 🔌 {base_site} API: {shortener_api}
 
