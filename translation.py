@@ -151,7 +151,7 @@ USER_ABOUT_MESSAGE = """
 {footer_text}
 
 🖼️ Banner image: {banner_image}
-Hello: {usern}
+
 
 """
 
