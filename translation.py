@@ -67,6 +67,10 @@ This feature works only in private mode only
 
 Ex: https://t.me/snapurl | snapurl"""
 
+CHANNELS_LIST_MESSAGE = """
+Here is a list of the channels:
+
+{channels}"""
 
 ADMINS_MESSAGE = """
 List of Admins who has access to this Bot
