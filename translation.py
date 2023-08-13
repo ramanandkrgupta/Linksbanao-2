@@ -88,8 +88,9 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
     ],
 [
 
-InlineKeyboardButton("Help", callback_data=f'help_command')
-    
+InlineKeyboardButton("Help", callback_data=f'help_command'),
+InlineKeyboardButton('More Features', callback_data=f'about_command')
+            
 ],
 
 ])
