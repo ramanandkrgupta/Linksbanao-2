@@ -231,10 +231,9 @@ async def unban_user_handler(c: Client, m: Message):
 async def stats_handler(c: Client, m: Message):
     try:
         txt = await m.reply("`Fetching stats...`")
-        size = await db.get_db_size()
-        free = 536870912 - size
-        size = await get_size(size)
-        free = await get_size(free)
+        
+        
+        
         link_stats = await db.get_bot_stats()
         runtime = datetime.datetime.now()
 
@@ -248,8 +247,7 @@ async def stats_handler(c: Client, m: Message):
 **- Total Links Shortened:** `{link_stats['links']}`
 **- Total Mdisk Links Shortened:** `{link_stats['mdisk_links']}`
 **- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
-**- Used Storage:** `{size}`
-**- Total Free Storage:** `{free}`
+
 
 **- Runtime:** `{runtime}`
     """
