@@ -231,7 +231,15 @@ async def unban_user_handler(c: Client, m: Message):
 async def stats_handler(c: Client, m: Message):
     try:
         txt = await m.reply("`Fetching stats...`")
-        
+        size = await db.get_db_size()
+        free = 536870912 - size
+        size = await get_size(size)
+        free = await get_size(free)
+        link_stats = await db.get_bot_stats()
+        runtime = datetime.datetime.now()
+
+        t = runtime - temp.START_TIME
+        runtime = str(datetime.timedelta(seconds=t.seconds))
         total_users = await total_users_count()
 
         msg = f"""
