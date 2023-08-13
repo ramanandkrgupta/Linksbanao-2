@@ -231,7 +231,7 @@ async def unban_user_handler(c: Client, m: Message):
 async def stats_handler(c: Client, m: Message):
     try:
         txt = await m.reply("`Fetching stats...`")
-        
+        link_stats = await get_bot_stats()
         
         
         
@@ -239,8 +239,8 @@ async def stats_handler(c: Client, m: Message):
         total_users = await total_users_count()
 
         msg = f"""
-**- Total Users:** `{total_users}`
-
+**- Total User👶:** `{total_users}`
+**- Total Shortener Links Shortened:** `{link_stats['shortener_links']}`
 
 
 
