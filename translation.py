@@ -133,7 +133,8 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 
 ])
 
-USER_ABOUT_MESSAGE = """
+USER_ABOUT_MESSAGE = """ Hello {}
+user {}
 🔧 Here are the current settings for this bot:
 
 - 🌐 Shortener website: {base_site}
