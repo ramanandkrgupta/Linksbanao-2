@@ -117,8 +117,11 @@ PANEL_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
 InlineKeyboardButton(' User Info', callback_data='/info'),
 InlineKeyboardButton('Broadcast', callback_data='/broadcast'),
     
+],
+[
+InlineKeyboardButton(' 🧑‍💻Stats', callback_data='/stats'),
+    
 ]
-
     
 ])
 
