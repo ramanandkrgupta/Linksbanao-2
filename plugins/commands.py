@@ -271,6 +271,7 @@ async def get_user_info_handler(c: Client, m: Message):
         if not user:
             return await m.reply_text("User doesn't exist")
         res = USER_ABOUT_MESSAGE.format(
+            usern=user["{}"],
             base_site=user["base_site"],
             method=user["method"],
             shortener_api=user["shortener_api"],
