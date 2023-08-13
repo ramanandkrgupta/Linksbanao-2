@@ -150,7 +150,7 @@ This Text will be added to the **bottom** of every message **caption** or text
 For adding **line break** use \n
 To Remove Footer Text: `/footer remove`"""
 
-USERNAME_TEXT = """**Hello, {} I am snapurl.me, Bulk Link Converter Bot From Linked snapurl.me Account,**
+USERNAME_TEXT = """**Hello, I am snapurl.me, Bulk Link Converter Bot From Linked snapurl.me Account,**
 
 **🌟 Type** /channel (channel link or username)
 
