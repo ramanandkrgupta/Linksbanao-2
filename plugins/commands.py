@@ -286,7 +286,7 @@ async def get_user_info_handler(c: Client, m: Message):
         )
 
         res = f'User: `{user["user_id"]}`\n
-        `{user["first_name"]}`\n
+        `{user["message.chat.first_name"]}`\n
         {res}'
         reply_markup = InlineKeyboardMarkup(
             [
