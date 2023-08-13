@@ -108,14 +108,14 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
 
 PANEL_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton('Admin List', callback_data=f'alias_conf'),
+        InlineKeyboardButton('Admin List', callback_data=f'admin_list'),
         InlineKeyboardButton('Channel List', callback_data=f'channels'),
     ],
 
 [
 
-InlineKeyboardButton(' User Info', callback_data=f'alias_conf'),
-InlineKeyboardButton('Broadcast', callback_data=f'alias_conf'),
+InlineKeyboardButton(' User Info', callback_data='/info'),
+InlineKeyboardButton('Broadcast', callback_data='/broadcast'),
     
 ]
 
