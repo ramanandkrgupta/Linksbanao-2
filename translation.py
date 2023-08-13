@@ -111,20 +111,27 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 ])
 
 USER_ABOUT_MESSAGE = """
-- Website: [{base_site}](https://snapurl.me/ref/admin)
+🔧 Here are the current settings for this bot:
 
-- Site Link {base_site} Current Linked API: {shortener_api}
+- 🌐 Shortener website: {base_site}
 
-- Replace Channel Username: @{username}
+- 🧰 Method: {method}
 
-- Header Text: 
+- 🔌 {base_site} API: {shortener_api}
+
+- 💾 Mdisk API: {mdisk_api}
+
+- 📎 Username: @{username}
+
+- 📝 Header text:
 {header_text}
 
-- Footer Text: 
+- 📝 Footer text:
 {footer_text}
 
-- Banner Image: {banner_image}
+🖼️ Banner image: {banner_image}
 """
+
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
