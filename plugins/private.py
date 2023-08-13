@@ -19,13 +19,7 @@ ft = f"Due To Overload Only Channel Sub Are Use This Bot Join @STATUSLOVER30."
 
 
 
-if chat_id in temp.BANNED_USERS:
-            await message.reply_text("You are banned from this bot")
-            return
 
-        return await func(client, message)
-
-    return wrapper
 
 # Private Chat
 @Client.on_message(filters.private)
