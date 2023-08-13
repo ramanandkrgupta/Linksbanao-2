@@ -285,9 +285,10 @@ async def get_user_info_handler(c: Client, m: Message):
             banner_image=user["banner_image"],
         )
 
-        res = f'User: `{user["user_id"]}`\n
-        `{user["message.chat.first_name"]}`\n
-        {res}'
+        res = f'''
+        User: `{user["user_id"]}`
+        Name: `{user["message.chat.first_name"]}`\n
+        {res}'''
         reply_markup = InlineKeyboardMarkup(
             [
                 [
