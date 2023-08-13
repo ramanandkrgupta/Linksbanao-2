@@ -125,6 +125,5 @@ async def on_callback_query(bot: Client, query: CallbackQuery):
         await asyncio.sleep(5)
         os.execl(sys.executable, sys.executable, *sys.argv)
     await query.answer()
-format(bot.mention(style='md')), reply_markup=PANEL_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
 
