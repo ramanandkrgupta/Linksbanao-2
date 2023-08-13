@@ -119,8 +119,6 @@ USER_ABOUT_MESSAGE = """
 
 - 🔌 {base_site} API: {shortener_api}
 
-- 💾 Mdisk API: {mdisk_api}
-
 - 📎 Username: @{username}
 
 - 📝 Header text:
@@ -130,6 +128,7 @@ USER_ABOUT_MESSAGE = """
 {footer_text}
 
 🖼️ Banner image: {banner_image}
+
 """
 
 
