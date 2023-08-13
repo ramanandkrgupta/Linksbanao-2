@@ -55,8 +55,9 @@ async def help_command(c, m: Message):
 @Client.on_message(filters.command('panel') & filters.private & filters.user(ADMINS))
 async def panel_command(c, m: Message):
     reply_markup=PANEL_MESSAGE_REPLY_MARKUP
+    
     bot = await bot.get_me()
-await query.message.edit(PANEL_MESSAGE.format(bot.mention(style='md')), reply_markup=PANEL_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
+    await query.message.edit(PANEL_MESSAGE.format(bot.mention(style='md')), reply_markup=PANEL_MESSAGE_REPLY_MARKUP, disable_web_page_preview=True)
 
     
 @Client.on_message(filters.command('features'))
