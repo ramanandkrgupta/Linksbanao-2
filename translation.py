@@ -82,7 +82,8 @@ ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
     [
         InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf'),
-        InlineKeyboardButton("Admins", callback_data="admins_list")
+        InlineKeyboardButton("Admins", callback_data="admins_list"),
+        InlineKeyboardButton("Restar", callback_data="restart")
     ],
 
 
