@@ -250,3 +250,43 @@ async def stats_handler(c: Client, m: Message):
         return await txt.edit(msg)
     except Exception as e:
         logging.error(e, exc_info=True)
+
+
+@Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS))
+
+async def get_user_info_handler(c: Client, m: Message):
+    try:
+        if len(m.command) != 2:
+            return await m.reply_text("Wrong Input!!\n`/info user_id`")
+        user = await get_user(int(m.command[1]))
+        if not user:
+            return await m.reply_text("User doesn't exist")
+        res = USER_ABOUT_MESSAGE.format(
+            base_site=user["base_site"],
+            method=user["method"],
+            shortener_api="This is something secret",
+            mdisk_api="This is something secret",
+            username=user["username"],
+            header_text=user["header_text"].replace("\n", "\n")
+            if user["header_text"]
+            else None,
+            footer_text=user["footer_text"].replace("\n", "\n")
+            if user["footer_text"]
+            else None,
+            banner_image=user["banner_image"],
+        )
+
+        res = f'User: `{user["user_id"]}`\n{res}'
+        reply_markup = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Ban", callback_data=f'ban#{user["user_id"]}'),
+                    InlineKeyboardButton("Close", callback_data="delete"),
+                ]
+            ]
+        )
+
+        return await m.reply_text(res, reply_markup=reply_markup, quote=True)
+    except Exception as e:
+        await m.reply_text(e)
+        logging.error(e)
