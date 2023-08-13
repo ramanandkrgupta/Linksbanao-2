@@ -52,7 +52,12 @@ async def help_command(c, m: Message):
         return await m.reply_photo(photo=WELCOME_IMAGE, caption=s, reply_markup=HELP_REPLY_MARKUP)
     await m.reply_text(s, reply_markup=HELP_REPLY_MARKUP, disable_web_page_preview=True)
 
+@Client.on_message(filters.command('panel') & filters.private & filters.user(ADMINS))
+async def panel_command(c, m: Message):
+    reply_markup=PANEL_MESSAGE_REPLY_MARKUP
 
+    bot = await c.get_me()
+    
 @Client.on_message(filters.command('features'))
 async def about_command(c, m: Message):
     reply_markup=ABOUT_REPLY_MARKUP
@@ -173,6 +178,8 @@ async def me_handler(bot, m:Message):
     buttons = await get_me_button(user)
     reply_markup = InlineKeyboardMarkup(buttons)
     return await m.reply_text(res, reply_markup=reply_markup, disable_web_page_preview=True)
+
+
 
 
 
