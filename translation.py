@@ -82,17 +82,11 @@ List of Admins who has access to this Bot
 ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
 
     [
-        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf'),
-        InlineKeyboardButton("Admins", callback_data="admins_list"),
-        InlineKeyboardButton("Restart", callback_data="restart"),
+        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf')
+        
         
     ],
-[
 
-InlineKeyboardButton("Help", callback_data=f'help_command'),
-InlineKeyboardButton('More Features', callback_data=f'about_command')
-            
-],
 
 ])
 
@@ -101,7 +95,7 @@ HELP_REPLY_MARKUP = InlineKeyboardMarkup([
     [
         InlineKeyboardButton('More Features', callback_data=f'about_command')
         
-    ],
+    ]
 
 
 ])
@@ -112,7 +106,21 @@ START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
     ]
 ])
 
+PANEL_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
+    [
+        InlineKeyboardButton('Admin List', callback_data=f'alias_conf'),
+        InlineKeyboardButton('Channel List', callback_data=f'channels'),
+    ],
 
+[
+
+InlineKeyboardButton(' User Info', callback_data=f'alias_conf'),
+InlineKeyboardButton('Broadcast', callback_data=f'alias_conf'),
+    
+]
+
+    
+])
 
 BACK_REPLY_MARKUP = InlineKeyboardMarkup([
     [
