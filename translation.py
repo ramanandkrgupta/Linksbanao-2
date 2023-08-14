@@ -136,6 +136,8 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
+- 🥳 User Name: {m.from_user.first_name}
+
 - 🧑‍💻 User Id: `{user_id}`
 
 - 🌐 Shortener website: {base_site}
