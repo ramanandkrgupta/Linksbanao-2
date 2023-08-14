@@ -114,12 +114,12 @@ PANEL_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
 
 [
 
-InlineKeyboardButton(' User Info', callback_data='/info'),
-InlineKeyboardButton('Broadcast', callback_data='/broadcast'),
+InlineKeyboardButton(' User Info', callback_data=f'info'),
+InlineKeyboardButton('Broadcast', callback_data=f'broadcast'),
     
 ],
 [
-InlineKeyboardButton(' 🧑‍💻Stats', callback_data='/stats'),
+InlineKeyboardButton(' 🧑‍💻Stats', callback_data='stats'),
     
 ]
     
@@ -135,8 +135,6 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
-
-- 🥳 User Name: {m.from_user.first_name}
 
 - 🧑‍💻 User Id: `{user_id}`
 
