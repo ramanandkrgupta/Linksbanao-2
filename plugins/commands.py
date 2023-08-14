@@ -160,7 +160,7 @@ async def banner_image_handler(bot, m: Message):
                 return await m.reply_text("Image URL is Invalid")
 
 
-@Client.on_message(filters.command('me') & filters.private)
+@Client.on_message(filters.command('settings') & filters.private)
 async def me_handler(bot, m:Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
@@ -168,7 +168,8 @@ async def me_handler(bot, m:Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
     res = USER_ABOUT_MESSAGE.format(
-                base_site=user["base_site"], 
+                usern=user["user_id"],
+                base_site=user["base_site"],
                 method=user["method"], 
                 shortener_api=user["shortener_api"], 
                 mdisk_api=user["mdisk_api"],
@@ -285,10 +286,10 @@ async def get_user_info_handler(c: Client, m: Message):
             banner_image=user["banner_image"],
         )
 
-        res = f'''
+        res = f'
         User: `{user["user_id"]}`\n
-        `{user["mention"]}`
-        {res}'''
+        
+        {res}'
         reply_markup = InlineKeyboardMarkup(
             [
                 [
