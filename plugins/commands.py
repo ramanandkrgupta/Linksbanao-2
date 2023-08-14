@@ -266,8 +266,7 @@ async def stats_handler(c: Client, m: Message):
         logging.error(e, exc_info=True)
 
 
-@Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS))
-@private_use
+@Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS)
 async def get_user_info_handler(c: Client, m: Message):
     try:
         if len(m.command) != 2:
