@@ -160,7 +160,7 @@ async def banner_image_handler(bot, m: Message):
                 return await m.reply_text("Image URL is Invalid")
 
 
-@Client.on_message(filters.command('settings') & filters.private)
+@Client.on_message(filters.command('me') & filters.private)
 async def me_handler(bot, m:Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
