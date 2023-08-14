@@ -275,7 +275,9 @@ async def get_user_info_handler(c: Client, m: Message):
         user = await get_user(int(m.command[1]))
         if not user:
             return await m.reply_text("User doesn't exist")
+            telegram_username = user.get("username", "N/A")  # Get the user's username, or use "N/A" if not available
         res = USER_ABOUT_MESSAGE.format(
+            username=telegram_username,  # Use the extracted username
             base_site=user["base_site"],
             method=user["method"],
             shortener_api=user["shortener_api"],
