@@ -267,7 +267,7 @@ async def stats_handler(c: Client, m: Message):
 
 
 @Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS))
-
+@private_use
 async def get_user_info_handler(c: Client, m: Message):
     try:
         if len(m.command) != 2:
@@ -290,7 +290,7 @@ async def get_user_info_handler(c: Client, m: Message):
             banner_image=user["banner_image"],
         )
 
-        res = f'User: \n{res}'
+        res = f'User: `{user["user_id"]}`\n{res}'
         reply_markup = InlineKeyboardMarkup(
             [
                 [
