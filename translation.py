@@ -136,7 +136,7 @@ BACK_REPLY_MARKUP = InlineKeyboardMarkup([
 USER_ABOUT_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🥳 User Name: {user_name}
+- 🥳 User Name: {first_name}
 
 - 🧑‍💻 User Id: `{user_id}`
 
