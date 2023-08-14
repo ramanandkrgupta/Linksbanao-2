@@ -168,11 +168,11 @@ async def me_handler(bot, m:Message):
     user_id = m.from_user.id
     user = await get_user(user_id)
 
-    user_name = m.from_user.username
-    user = await get_user(username)
+    user_name = m.from_user.first_name
+    user = await get_user(first_name)
 
-    user_name = m.from_user.username
-    user = await get_user(username)
+    user_name = m.from_user.first_name
+    user = await get_user(first_name)
     
     res = USER_ABOUT_MESSAGE.format(
                 user_name=user["user_name"],
