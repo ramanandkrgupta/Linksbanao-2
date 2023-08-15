@@ -275,7 +275,7 @@ async def get_user_info_handler(c: Client, m: Message):
         user = await get_user(int(m.command[1]))
         if not user:
             return await m.reply_text("User doesn't exist")
-        user_first_name = await c.get_users(user["user_id"]).first_name  # Get the user's first name
+        user_first_name = user["first_name"]  # Get the user's first name from the user object
         res = USER_ABOUT_MESSAGE.format(
             first_name=user_first_name,  # Include the user's first name in the format
             base_site=user["base_site"],
