@@ -278,8 +278,7 @@ async def get_user_info_handler(c: Client, m: Message):
         if not user:
             return await m.reply_text("User doesn't exist")
         
-        user_object = await c.get_users(user_id)
-        user_first_name = user_object.first_name
+        user_first_name = user.get("first_name", "Unknown")
         
         res = USER_ABOUT_MESSAGE.format(
             first_name=user_first_name,
