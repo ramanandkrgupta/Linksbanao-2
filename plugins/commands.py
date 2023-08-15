@@ -272,12 +272,17 @@ async def get_user_info_handler(c: Client, m: Message):
     try:
         if len(m.command) != 2:
             return await m.reply_text("Wrong Input!!\n`/info user_id`")
-        user = await get_user(int(m.command[1]))
+        
+        user_id = int(m.command[1])
+        user = await get_user(user_id)
         if not user:
             return await m.reply_text("User doesn't exist")
-        user_first_name = user["first_name"]  # Get the user's first name from the user object
+        
+        user_object = await c.get_users(user_id)
+        user_first_name = user_object.first_name
+        
         res = USER_ABOUT_MESSAGE.format(
-            first_name=user_first_name,  # Include the user's first name in the format
+            first_name=user_first_name,
             base_site=user["base_site"],
             method=user["method"],
             shortener_api=user["shortener_api"],
@@ -304,5 +309,5 @@ async def get_user_info_handler(c: Client, m: Message):
 
         return await m.reply_text(res, reply_markup=reply_markup, quote=True)
     except Exception as e:
-        await m.reply_text(e)
-        logging.error(e)
+        await m.reply_text(str(e))
+        logging.error(e, exc_info=True)
