@@ -180,7 +180,7 @@ async def me_handler(bot, m:Message):
                 header_text=user["header_text"].replace(r'\n', '\n') if user["header_text"] else None,
                 footer_text=user["footer_text"].replace(r'\n', '\n') if user["footer_text"] else None,
                 banner_image=user["banner_image"],
-                first_name=first_name,
+                first_name=user["first_name"],
                 user_id=user["user_id"])
 
     buttons = await get_me_button(user)
