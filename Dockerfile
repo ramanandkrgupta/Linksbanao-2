@@ -2,10 +2,10 @@
 FROM python:3.8-slim-buster
 
 # Update the package lists and upgrade existing packages
-RUN apt update && apt upgrade -y
+RUN apt-get update && apt-get upgrade -y # corrected command to use apt-get instead of apt
 
 # Install git to be able to clone repositories
-RUN apt install git -y
+RUN apt-get install git -y # corrected command to use apt-get instead of apt
 
 # Copy the requirements.txt file to the root directory
 COPY requirements.txt /requirements.txt
@@ -16,8 +16,8 @@ WORKDIR /
 # Upgrade pip and install the required Python packages
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 
-# Create a directory for the converterbot application
-RUN mkdir /converterbot
+# Create a directory for the converterbot applicationRUN mkdir /
+converterbot
 
 # Change the working directory to /converterbot
 WORKDIR /converterbot
