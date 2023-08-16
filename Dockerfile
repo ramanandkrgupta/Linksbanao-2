@@ -1,7 +1,7 @@
 
-FROM python:3.8-slim-buster#
+FROM python:3.8-slim-buster
 
- Update the package lists and upgrade existing packages
+# Update the package lists and upgrade existing packages
 RUN apt update && apt upgrade -y
 
 # Install git to be able to clone repositories
@@ -26,7 +26,7 @@ WORKDIR /converterbot
 COPY start.sh /converterbot/start.sh
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 808
 
 # Set the absolute path of the start.sh script as the command to run when the container starts
 CMD ["/bin/bash", "/converterbot/start.sh"]
