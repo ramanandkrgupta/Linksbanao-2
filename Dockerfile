@@ -26,7 +26,7 @@ WORKDIR /converterbot
 COPY start.sh /converterbot/start.sh
 
 # Expose port 8080
-EXPOSE 808
+EXPOSE 8080
 
 # Set the absolute path of the start.sh script as the command to run when the container starts
 CMD ["/bin/bash", "/converterbot/start.sh"]
