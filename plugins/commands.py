@@ -271,13 +271,9 @@ async def get_user_info_handler(c: Client, m: Message):
     try:
         if len(m.command) != 2:
             return await m.reply_text("Wrong Input!!\n`/info user_id`")
-        
-        user_id = int(m.command[1])
-        user = await get_user(user_id)
+        user = await get_user(int(m.command[1]))
         if not user:
             return await m.reply_text("User doesn't exist")
-        
-        
         res = USER_ABOUT_MESSAGE.format(
             base_site=user["base_site"],
             method=user["method"],
@@ -305,5 +301,5 @@ async def get_user_info_handler(c: Client, m: Message):
 
         return await m.reply_text(res, reply_markup=reply_markup, quote=True)
     except Exception as e:
-        await m.reply_text(str(e))
-        logging.error(e, exc_info=True)
+        await m.reply_text(e)
+        logging.error(e)
