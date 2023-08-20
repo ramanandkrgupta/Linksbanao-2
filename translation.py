@@ -160,8 +160,6 @@ USER_ABOUT_MESSAGE = """
 USER_INFO_MESSAGE = """
 🔧 Here are the current settings for this bot:
 
-- 🧑‍💻 User Id: `{user_id}`
-
 - 🌐 Shortener website: {base_site}
 
 - 🧰 Method: Telegram Bot
