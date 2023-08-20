@@ -157,6 +157,34 @@ USER_ABOUT_MESSAGE = """
 
 """
 
+USER_INFO_MESSAGE = """
+🔧 Here are the current settings for this bot:
+
+- 🧑‍💻 User Id: `{user_id}`
+
+- 🌐 Shortener website: {base_site}
+
+- 🧰 Method: Telegram Bot
+
+- 🔌 {base_site} API: {shortener_api}
+
+- 📎 Username: @{username}
+
+- 📝 Header text:
+{header_text}
+
+- 📝 Footer text:
+{footer_text}
+
+🖼️ Banner image: {banner_image}
+
+
+"""
+
+
+
+
+
 
 
 SHORTENER_API_MESSAGE = """To add or update your Shortner Website API, 
