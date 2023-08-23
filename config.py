@@ -17,7 +17,7 @@ def is_enabled(value, default):
 # Mandatory variables for the bot to start
 API_ID = int(os.getenv("API_ID", "11677823"))
 API_HASH = os.environ.get("API_HASH", "f1be9e535abfe6f3e75d0acaa6925bc1")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "6509786821:AAH0H0cStpi7uhxwafkvTLY6GQwX_PTFa9I")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "6667474825:AAGetjGEDat33oKuvb3lvS7E6p0dvlc7Xfk")
 ADMINS = [int(i.strip()) for i in os.environ.get("ADMINS").split("1905927769")] if os.environ.get("ADMINS") else []
 ADMIN = ADMINS
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "snapurl")
